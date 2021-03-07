@@ -1,5 +1,21 @@
 -----------------------------------------------------------------------
 01 Importando modulos
 -----------------------------------------------------------------------
+A força do Python é sua habilidade de ser estendido através de módulos. O primeiro passo em muitos programas é importar aqueles módulos que você precisa.
+O comando mais simples para importar é apenas chamar "import modulename", nesse caso voce acessa os metodos dentro desse modulo chamando "modulename.methodname".
+Para evitar isso adotamos o comando "from modulename import *" para importar tudo daquele modulo e poder chamar todos os metodos dentro dele. Mas voce pode fazer isso seletivamente trocando o "*" pelo nome do metodo ou objeto.
 
-A força do Python é sua habilidade de ser estendido através de módulos. O primeiro passo em muitos programas é importar aqueles módulos que você precisa
+
+-----------------------------------------------------------------------
+02 Recarregando modulos
+-----------------------------------------------------------------------
+Quando um modulo é importado pela primeira vez, quaiquer funções de inicalização são executadas naquela hora. Isso pode envolver criação de objetos ou inicialização de conexões. Mas isso é feito somente na primeira vez dentro de uma dada sessão. Se voce quer que esse código seja recarregado, voce deve usar o comando "reload", a sintaxe é "reload(modulename)".
+Algo que voce deve se lembrar é que o dicionário do import anterior não é jogado fora, mas apenas reescrito. Isso significa que quaiquer definições que voce alterou entre o import e o reload são atualizadas corretamente. Poderá ter outros efeitos colaterais, use-o com cuidado.
+
+
+-----------------------------------------------------------------------
+03 Instalando novos modulos
+-----------------------------------------------------------------------
+
+
+
