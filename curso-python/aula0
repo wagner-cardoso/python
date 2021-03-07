@@ -1,0 +1,64 @@
+------------------------------------------------------------------------------
+Atualizacao do Ubuntu 20.04 e instalacao do Python 3
+------------------------------------------------------------------------------
+O Ubuntu 20.04 e outras versoes do Linux Debian vem com Python 3 pre-instalad. Para ter certeza que nossas versoes estao atualizadas,
+vamos atualizar e melhorar o sistema com o comando apt:
+
+  $ sudo apt update
+  $ sudo apt -y upgrade
+
+Apos o termino da atualizacao, podemos verificar a versao do Python que foi instalado no sistema digitando:
+
+  $ python3 -V
+
+
+------------------------------------------------------------------------------
+Instalacao do pip
+------------------------------------------------------------------------------
+Para gerenciar pacotes de software para o Python, vamos instalar o pip, uma ferramenta que instalara e gerenciara pacotes de programas
+que usaremos em nossos projetos de desenvolvimento.
+
+  $ sudo apt install -y python3-pip
+
+Para verificar a instalacao digite:
+
+  $ pip3 -V
+
+
+------------------------------------------------------------------------------
+Configurando um ambiente virtual
+------------------------------------------------------------------------------
+Um ambiente virtual permite a voce ter um ambiente isolado na sua maquina para seus projetos Python, garantindo que cada projeto
+Python tenha suas proprias dependencias e que nao ira corromper outros projetos.
+
+  $ sudo apt install -y python3-venv
+
+Apos esse modulo ser instalado, estamos pronto para criar ambientes. Vamos escolher um diretorio para colocarmos nossos ambientes
+dentro dele:
+
+  $ mkdir ambientes
+  $ cd ambientes
+
+Uma vez estando dentro desse diretorio, podemos criar um ambiente executando o seguinte comando:
+
+  $ python3 -m venv my_env
+
+Para utilizar esse ambiente digite:
+
+  $ source my_env/bin/activate
+
+Seu prompt de comando agora sera prefixado com o nome do ambiente, neste caso eh my_env
+Obs: note que dentro do ambiente virtual voce pode usar o comando python ao inves de python3, e pip ao onves de pip3
+
+Para sair do ambiente apenas digite:
+
+  $ deactivate
+
+
+---------------------------------------------------------------------------------------
+Instalacao do Freeplane - Aplicativo para gerar mapas mentais
+---------------------------------------------------------------------------------------
+Executar os comandos abaixo:
+  $ cd ~/Downloads
+  $ wget "https://sourceforge.net/projects/freeplane/files/freeplane%20stable/freeplane_1.8.11~upstream-1_all.deb/download" -O freeplane.deb
+  $ sudo apt install ./freeplane.deb
