@@ -20,14 +20,12 @@ indent_mode=2
 [project]
 name=crash-course
 base_path=D:\\git\\python\\crash-course\\
-description=
+description=Leitura e estudo do livro Python Crash Course de Eric Matthes
+file_patterns=
 
 [long line marker]
 long_line_behaviour=1
 long_line_column=72
 
 [files]
-current_page=2
-FILE_NAME_0=779;Python;0;EUTF-8;1;1;0;D%3A%5Cgit%5Cpython%5Ccrash-course%5Cname_cases.py;0;4
-FILE_NAME_1=0;Python;0;EUTF-8;1;1;0;D%3A%5Cgit%5Cpython%5Ccrash-course%5Capostrophe.py;0;4
-FILE_NAME_2=13;Python;0;EUTF-8;1;1;0;D%3A%5Cgit%5Cpython%5Ccrash-course%5Czen.py;0;4
+current_page=-1
