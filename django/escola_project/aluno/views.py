@@ -7,22 +7,22 @@ from .models import Aluno
 
 def index(request):
     # criando um novo registro de aluno
-    aluno = Aluno(
-        matricula = 5, nome = "Ilna Batinga", email = "ilnabc1@gmail.com", nota = 7.5
-    )
+    #aluno = Aluno(
+    #    matricula = 5, nome = "Ilna Batinga", email = "ilnabc1@gmail.com", nota = 7.5
+    #)
     #aluno.save()
 
     # ler todos os alunos
     objetos = Aluno.objects.all()
-    res = 'imprimindo todas as entradas do DB:<br>'
+    res = '<h1>LISTA DE ALUNOS DA TURMA</h1>MATRIC | NOME<br>'
 
     for aluno in objetos:
         res += str(aluno.matricula) + " - " + aluno.nome + "<br>"
 
     # ler um registro especifico
-    ilna = Aluno.objects.get(matricula = 5)
-    res += '<hr>imprimindo apenas um registro <br>'
-    res += "Nome...: " + ilna.nome + "<br>Email...: " + ilna.email + "<br>Nota...:" + str(ilna.nota)
+    #ilna = Aluno.objects.get(matricula = 5)
+    #res += '<hr>imprimindo apenas um registro <br>'
+    #res += "Nome...: " + ilna.nome + "<br>Email...: " + ilna.email + "<br>Nota...:" + str(ilna.nota)
 
     return HttpResponse(res)
 
